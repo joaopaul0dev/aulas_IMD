@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Exercício 2</title>
+</head>
+<body>
+<h1>Entrada do Programa - Exercício 2</h1>
+N1: <input type="number" id="a" value=""><br />
+N2: <input type="number" id="b" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+<p id="resultado"></p>
+<script>
+function executarExercicio() {
+    var x = Number(document.getElementById('a').value);
+    var y = Number(document.getElementById('b').value);
+    var soma = 0;
+
+    for (var i = x; i <= y; i++) {
+        soma += i;
+    }
+
+    document.getElementById('resultado').innerHTML = "Soma: " + soma;
+}
+</script>
+</body>
+</html>

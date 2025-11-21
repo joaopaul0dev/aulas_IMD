@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Exercício 1</title>
+</head>
+<body>
+<h1>Entrada do Programa - Exercício 1</h1>
+N1: <input type="number" id="a" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+<p id="resultado"></p>
+<script>
+function executarExercicio() {
+    var a = Number(document.getElementById('a').value);
+
+    var r = "";
+    if (a > 0) {
+        r = "Número positivo";
+    } else if (a < 0) {
+        r = "Número negativo";
+    } else {
+        r = "O valor é zero";
+    }
+    document.getElementById('resultado').innerHTML = r;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ 
+    function executarExercicio() {
+    var numeros = []; // Array para armazenar números
+    var num = Number(prompt("Digite um número (0 para parar):"));
+    
+    // Laço while para ler números até 0
+    while (num !== 0) {
+        numeros.push(num); // Adiciona ao array
+        num = Number(prompt("Digite um número (0 para parar):"));
+    }
+    
+    // Se array vazio, exibe 0
+    if (numeros.length === 0) {
+        var r = 0;
+        document.getElementById('resultado').innerHTML = r;
+        return;
+    }
+    
+    // Contagem de ocorrências com objeto
+    var contagem = {};
+    for (var i = 0; i < numeros.length; i++) {
+        var atual = numeros[i];
+        if (contagem[atual] === undefined) {
+            contagem[atual] = 1;
+        } else {
+            contagem[atual]++;
+        }
+    }
+    
+    // Encontra o número
+ // Encontra o número com mais ocorrências
+    var maxCount = 0;
+    var numMax = null;
+    for (var chave in contagem) {
+        if (contagem[chave] > maxCount) {
+            maxCount = contagem[chave];
+            numMax = parseInt(chave);
+        }
+    }
+    
+    // Coleta índices do número mais frequente
+    var indices = [];
+    for (var j = 0; j < numeros.length; j++) {
+        if (numeros[j] === numMax) {
+            indices.push(j);
+        }
+    }
+    
+    // Monta string de resultado com quebras de linha
+    var resultado = "Número mais frequente: " + numMax + " (" + maxCount + " vezes)<br>Índices:<br>";
+    for (var k = 0; k < indices.length; k++) {
+        resultado += indices[k] + "<br>";
+    }
+    
+    document.getElementById('resultado').innerHTML = resultado;
+}
+ </script>
+</body>
+

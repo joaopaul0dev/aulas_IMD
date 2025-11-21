@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Exercício 3</title>
+</head>
+<body>
+
+    <h1>Entrada do Programa - Exercício 3</h1>
+
+DDD: <input type="number" id="a" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+
+<p id="resultado"></p>
+<script>
+function executarExercicio() {
+    var ddd = Number(document.getElementById('a').value);
+    var estados = {
+        11: "São Paulo",
+        21: "Rio de Janeiro",
+        27: "Espírito Santo",
+        31: "Minas Gerais",
+        41: "Paraná",
+        47: "Santa Catarina",
+        51: "Rio Grande do Sul",
+        61: "Distrito Federal",
+        62: "Goiás",
+        63: "Tocantins",
+        65: "Mato Grosso",
+        67: "Mato Grosso do Sul",
+        68: "Acre",
+        69: "Rondônia",
+        71: "Bahia",
+        79: "Sergipe",
+        81: "Pernambuco",
+        82: "Alagoas",
+        83: "Paraíba",
+        84: "Rio Grande do Norte",
+        85: "Ceará",
+        86: "Piauí",
+        91: "Pará",
+        92: "Amazonas",
+        95: "Roraima",
+        96: "Amapá",
+        98: "Maranhão"
+    };
+
+    var r = estados[ddd] || "DDD não encontrado";
+
+    document.getElementById('resultado').innerHTML = r; 
+}
+
+</script>
+</body>
+</html>

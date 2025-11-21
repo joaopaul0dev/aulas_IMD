@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header, nav, article, footer {
+      padding: 20px;
+      border: 1px solid lightgrey;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    nav {
+      background-color: white;
+    }
+    header {
+      background-color: gray;
+    }
+    footer {
+      background-color: lightslategray;
+      margin-top: auto;
+    }
+    main {
+      display: flex;
+      flex: 1;
+    }
+    nav, article {
+      margin: 10px;
+    }
+    nav {
+      flex: 1;
+    }
+    article {
+      flex: 3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cabeçalho do Site</h1>
+  </header>
+  <main>
+    <nav>
+      <ul>
+        <li><a href="#">Londres</a></li>
+        <li><a href="#">Paris</a></li>
+        <li><a href="#">Rio de Janeiro</a></li>
+      </ul>
+    </nav>
+    <article>
+      <h2>Conteúdo Principal</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit voluptas distinctio, voluptates nesciunt qui inventore rerum harum excepturi quis, tempora incidunt dolorem illum ipsa autem eveniet corporis doloribus? Minus.</p>
+    </article>
+  </main>
+  <footer>
+    Rodapé do Site &copy; 2025
+  </footer>
+</body>
+</html>

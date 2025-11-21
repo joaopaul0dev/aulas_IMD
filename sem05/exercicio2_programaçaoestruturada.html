@@ -1,0 +1,19 @@
+<html> 
+    <head>
+        <title> Exercício 2 - programação estrutrada </title>
+    </head>
+    <body>
+        <h1> descubra a que dia é hoje:</h1>
+        <button onclick="executarExercicio()">OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var string = new Date().toString()
+                var data = "Data: " + string.slice(8, 10) + " de " + string.slice(4,7) + " de " + string.slice(11,15)
+                var hora = "Hora: " + string.slice(16.18) + "h" + string.slice(19,21)
+                var r = data + "<br>" + hora
+                document.getElementById("resultado").innerHTML = r;
+            } 
+        </script>
+    </body>
+</html>

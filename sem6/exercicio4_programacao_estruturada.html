@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Exercício 4</title>
+</head>
+<body>
+<h1>Entrada do Programa - Exercício 4</h1>
+N1: <input type="number" id="a" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+<p id="resultado"></p>
+<script>
+function executarExercicio() {
+    var numStr = document.getElementById('a').value;
+    var soma = 0;
+
+    for (var i = 0; i < numStr.length; i++) {
+        soma += Number(numStr.charAt(i)); //
+    }
+
+    var paridade = (soma % 2 === 0) ? "par" : "ímpar";
+
+    var r = "A soma é " + paridade + ": " + soma;
+
+    document.getElementById('resultado').innerHTML = r;
+}
+</script>
+</body>
+</html>

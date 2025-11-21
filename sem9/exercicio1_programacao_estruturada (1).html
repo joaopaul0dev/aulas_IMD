@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h1>Entrada do Programa</h1>
+    <button onclick='receberNumeros()'>OK</button>
+    <p id="resultado"></p>
+<script>
+ var r = []; 
+function receberNumeros() {
+
+let a = Number(prompt("Digite um número (0 para parar):"));
+
+if (a !== 0) {
+   
+        r.unshift(a); 
+       
+        receberNumeros();
+    }
+
+ 
+        console.log(r)
+
+document.getElementById('resultado').innerHTML = r;
+}
+ </script>
+</body>
+</html>
+

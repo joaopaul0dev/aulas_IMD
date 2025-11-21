@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02 - programação estruturada</title>
+</head>
+<body>
+        
+<h1>Entrada do Programa</h1>
+<button onclick='executarExercicio()'>OK</button>
+<p id="resultado"></p>
+<script>
+function executarExercicio() {
+    
+    var matriz =([],[],[],[],[],[],[],[],[],[] ); 
+    for (var i = 0; i < 10; i++) {
+        matriz[i] = [];
+        for (var j = 0; j < 10; j++) {
+            
+            matriz[i][j] = Math.floor(Math.random() * 100);
+        }
+    }
+    
+    var linha = Number(prompt("Informe o número da linha para somar (0 a 9):"));
+    if (linha < 0 || linha > 9) {
+        document.getElementById('resultado').innerHTML = "Linha inválida.";
+        return;
+    }
+    
+    var soma = 0;
+    for (var k = 0; k < 10; k++) {
+        soma += matriz[linha][k];
+    }
+    
+    var r = "Soma da linha " + linha + ": " + soma;
+    
+    document.getElementById('resultado').innerHTML = r;
+}
+</script>
+</body>
+</html>

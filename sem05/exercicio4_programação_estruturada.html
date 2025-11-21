@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercício 4</title>
+</head>
+<body>
+    <h1>seja bem vindo! insira seu nome abaixo</h1>
+   <input id="a" value="" /> <br />
+  <button onclick="executarExercicio()">OK</button>
+  <p id="resultado"></p>
+
+  <script>
+    function executarExercicio() {
+      const texto = "Olá {USUARIO}, seja bem-vindo(a) ao Instituto Metrópole Digital.";
+      var nome = document.getElementById('a').value;
+      var resultado = texto.replace("{USUARIO}", nome);
+      document.getElementById('resultado').innerHTML = resultado;
+    }
+  </script>
+</body>
+</html>
